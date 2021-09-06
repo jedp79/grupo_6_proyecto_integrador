@@ -7,7 +7,7 @@
 
 <b>Integrantes:</b> 
 <ul>
-  <li><u>Martina Mollo:</u> me gusta diseñar.</li>
+<li><u>Martina Mollo:</u> me gusta diseñar.</li>
 <li><u>Uriel Szwarcman:</u> Mi nombre es Uriel, tengo 22 años y me gusta la milanesa de pollo napolitana.</li>
 <li><u>Jose Perrier:</u> tengo 41 años, me gusta el diseño web y quiero aprender a programar para hacer sitios completos.</li>
 <li><u>Gino Brunori:</u> tengo 21 años, me gustan las computadoras y todo lo relacionado a ellas.</li>
