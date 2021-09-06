@@ -11,9 +11,10 @@
 <li>Uriel Szwarcman: Mi nombre es Uriel, tengo 22 años y me gusta la milanesa de pollo napolitana.</li>
 <li>Jose Perrier: tengo 41 años, me gusta el diseño web y quiero aprender a programar para hacer sitios completos.</li>
 <li>Gino Brunori: tengo 21 años, me gustan las computadoras y todo lo relacionado a ellas.</li>
+</ul>
 
 <b>Sitios de referencia: </b><br>
-<ol value="1">
+<ol>
 <li><a href="https://www.printful.com/es/productos-personalizados"  target="_blank">Printful</a>: posee mucha información acerca de la personalización de los productos.</li> 
 <li><a href="http://decoratu.com.co/"  target="_blank">Decoratu</a>: tiene la opción de poder personalizar distintos productos según la necesidad del cliente.</li>
 <li><a href="https://www.area51print.com/articulos-personalizables-para-el-hogar/" target="_blank">Area51</a>: tiene la opción de poder personalizar distintos productos según la necesidad del cliente.</li>
