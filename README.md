@@ -1,5 +1,5 @@
 # grupo_6_Own_Style
-Descripción del sitio: "Está dedicado a vender indumentaria y accesorios personalizables por el mismo cliente, pudiendo así ir configurando a su gusto el producto antes de comprarlo".
+<b>Descripción del sitio:</b> "Está dedicado a vender indumentaria y accesorios personalizables por el mismo cliente, pudiendo así ir configurando a su gusto el producto antes de comprarlo".
 
 Productos: Remeras, buzos, tasas, gorras, relojes, cuadros.
 
