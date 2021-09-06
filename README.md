@@ -6,9 +6,9 @@
 <b>Perfil del público</b>: Es para toda aquella persona que le gusta llevar consigo alguna prenda o accesorio original y creado a su gusto.
 
 <b>Integrantes:</b> 
-Martina Mollo: me gusta diseñar 
-Uriel Szwarcman: Mi nombre es Uriel, tengo 22 años y me gusta la milanesa de pollo napolitana
-Jose Perrier: tengo 41 años, me gusta el diseño web y quiero aprender a programar para hacer sitios completos.
+Martina Mollo: me gusta diseñar.<br>
+Uriel Szwarcman: Mi nombre es Uriel, tengo 22 años y me gusta la milanesa de pollo napolitana.<br>
+Jose Perrier: tengo 41 años, me gusta el diseño web y quiero aprender a programar para hacer sitios completos.<br>
 Gino Brunori: tengo 21 años, me gustan las computadoras y todo lo relacionado a ellas.
 
 <b>Sitios de referencia: </b><br>
