@@ -13,7 +13,7 @@
 <li>Gino Brunori: tengo 21 años, me gustan las computadoras y todo lo relacionado a ellas.</li>
 
 <b>Sitios de referencia: </b><br>
-<ol value="number">
+<ol value="1">
 <li><a href="https://www.printful.com/es/productos-personalizados"  target="_blank">Printful</a>: posee mucha información acerca de la personalización de los productos.</li> 
 <li><a href="http://decoratu.com.co/"  target="_blank">Decoratu</a>: tiene la opción de poder personalizar distintos productos según la necesidad del cliente.</li>
 <li><a href="https://www.area51print.com/articulos-personalizables-para-el-hogar/" target="_blank">Area51</a>: tiene la opción de poder personalizar distintos productos según la necesidad del cliente.</li>
