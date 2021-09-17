@@ -1,0 +1,98 @@
+main{
+	margin: 0 auto;
+	width: 100%;
+	padding: 8px;
+}
+.descrip1{
+	margin: 0;
+	font-weight: bold;
+}
+.descrip1 img{
+	width: 100%;
+	margin: 15px 0;	
+}
+.descrip1 h1{
+	font-size: 24px;
+}
+.descrip1 h2{
+	font-size: 18px;
+}
+.descrip1 .precio{
+	font-size: 36px;
+	font-weight: bold;
+	margin: 10px 0;
+	text-shadow: 2px 1px #8b8b8b;
+	color: rgb(0, 129, 97);
+	text-align: center;
+}
+.descrip2{
+	border: 1px solid #75a3a3;
+	padding: 6px;
+	border-radius: 4px;
+	margin: 20px 0;
+	
+}
+.descrip2 p{
+	font-weight: bold;
+}
+.descrip2 ul{
+	display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1 em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+.descrip2 li{
+	line-height: 30px;
+}
+@media (min-width: 732px) {
+	.descrip1{
+		display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+				    
+	}
+	.descrip1 img{
+		min-width:350px ;
+		margin-right: 15px;
+		
+	}
+	.descrip1 h1{
+		margin-top: 50px;
+	}
+	.descrip1, .descrip2{
+		margin: 20px auto;
+	}
+}
+@media (min-width: 1000px) {
+
+	.descrip1 img{
+		min-width:550px ;
+		margin-right: 15px;		
+	}
+	.descrip1, .descrip2{
+		max-width:1000px;
+		margin: 20px auto;
+	}
+}
+.buttom{
+	border: solid 1px #c2c1c1;
+	border-radius: 6px;	
+	padding: 8px 12px;
+	box-shadow: 2px 2px #888888;
+	cursor: pointer;
+	font-weight: bold;
+	margin: 3px;
+	text-align:center;
+}
+.buttom:hover{
+	opacity: 0.7;
+}
+.submit{
+	background-color: #345b63;
+	color: white;
+}
