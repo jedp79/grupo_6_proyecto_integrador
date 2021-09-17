@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif; */
 html {
@@ -8,13 +10,14 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Roboto Condensed", sans-serif;
 }
 :root {
-  --verdeOscuro: #112031;
-  --verdeMedio: #152d35;
-  --verdeClaro: #345b63;
-  --verdeBlanco: #d4ecdd;
+  --verdeOscuro: #2a0944;
+  --verdeMedio: #fec260;
+  --verdeClaro: #3b185f;
+  --verdeBlanco: #f3f1f5;
 }
 
 /* ===HOME=== */
@@ -71,7 +74,7 @@ html {
   text-align: center;
   margin: 2em 0;
   font-family: "Roboto Slab", serif;
-  color: var(--verdeMedio);
+  color: var(--verdeClaro);
 }
 .home_portada2_img {
   width: 19vh;
@@ -170,12 +173,12 @@ html {
 .home_tutorial h2 {
   margin-top: 2em;
   font-size: 1.5rem;
-  color: var(--verdeMedio);
+  color: var(--verdeClaro);
 }
 .home_tutorial_subrayado {
   height: 0.3em;
   width: 12em;
-  background-color: var(--verdeMedio);
+  background-color: var(--verdeClaro);
   border-radius: 3px;
   margin-top: 0.2em;
 }

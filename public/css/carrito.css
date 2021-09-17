@@ -1,111 +1,106 @@
 /* CARRITO */
 .body-carrito {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .carrito {
-    border: solid 1px black;
-    /* margin-top: 51vh; */
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    /* align-self: center; */
-    margin-bottom: 159px;
+  border: solid 1px black;
+  /* margin-top: 51vh; */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  /* align-self: center; */
+  margin-bottom: 55vh;
 }
 
 .carrito_fondo {
-    margin-top: 100px;
-    justify-content: center;
-    /* align-content: center; */
-    display: flex;
-
+  margin-top: 100px;
+  justify-content: center;
+  /* align-content: center; */
+  display: flex;
 }
 
 /* CARRITO LADO IZQUIERDO */
 .carrito-detalle-producto {
-
-    display: flex;
+  display: flex;
 }
 .carrito-detalle-producto ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    /* border: red solid 2px; */
-    margin: 0px 0px 50px 0px ;
-    padding: 2px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  /* border: red solid 2px; */
+  margin: 0px 0px 50px 0px;
+  padding: 2px;
 }
 .carrito-nombre-producto {
-    font-size: 25px;
-    font-weight: bold;
+  font-size: 25px;
+  font-weight: bold;
 }
 .carrito-descripcion-producto {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .remera {
-    width: 150px;
-    margin-right: 0px;
+  width: 150px;
+  margin-right: 0px;
 }
 
 /* CARRITO LADO DERECHO */
 .carrito-cantidad {
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px ;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
 }
 
 .cantidad {
-    font-size: 25px;
-    font-weight: bold;
-    
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .cantidad-numero {
-    border-radius: 8px;
-    background-color: rgb(212, 212, 212);
-    font-weight: bold;
-    height: 35px;
-    width: 35px;
-    text-align: center;
-    margin: auto;
-    font-size: 25px;
-    
+  border-radius: 8px;
+  background-color: rgb(212, 212, 212);
+  font-weight: bold;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  margin: auto;
+  font-size: 25px;
 }
 
 .precio {
-    font-size: 25px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* BOTONES DE CONFIRMACION */
 .carrito-botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 12px;
-    width: 500px 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  width: 500px;
 }
 .boton-confirmar {
-    background-color:#44bd82;
-    color: whitesmoke;
-    border-radius: 8px;
-    font-weight: bold;
-    height: 35px;
-    width: 200px;
+  background-color: #44bd82;
+  color: whitesmoke;
+  border-radius: 8px;
+  font-weight: bold;
+  height: 35px;
+  width: 200px;
 }
 
 .boton-cancelar {
-    background-color: #c46666;
-    color: white;
-    border-radius: 8px;
-    font-weight: bold;
-    height: 35px;
-    width: 90px;
-    margin-right: 40px;
+  background-color: #c46666;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  height: 35px;
+  width: 90px;
+  margin-right: 40px;
 }
-

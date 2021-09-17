@@ -1,10 +1,10 @@
 /* font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Slab', serif; */
 :root {
-  --verdeOscuro: #112031;
-  --verdeMedio: #152d35;
-  --verdeClaro: #345b63;
-  --verdeBlanco: #d4ecdd;
+  --verdeOscuro: #2a0944;
+  --verdeMedio: #fec260;
+  --verdeClaro: #3b185f;
+  --verdeBlanco: #f3f1f5;
 }
 .home_cabecera {
   width: 100%;
@@ -24,7 +24,6 @@ font-family: 'Roboto Slab', serif; */
   justify-content: center;
   align-items: center;
   margin-bottom: 200px;
-
 }
 .login_formulario {
   width: 95%;
