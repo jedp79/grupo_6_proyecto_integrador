@@ -6,7 +6,7 @@ font-family: 'Roboto Slab', serif; */
   --verdeClaro: #345b63;
   --verdeBlanco: #d4ecdd;
 }
-..home_cabecera {
+.home_cabecera {
   width: 100%;
   background-color: var(--verdeOscuro);
   position: static;
