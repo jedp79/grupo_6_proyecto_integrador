@@ -19,10 +19,12 @@ font-family: 'Roboto Slab', serif; */
 .login {
   height: calc(100vh - 70px - 124px);
   background-color: var(--verdeBlanco);
-  margin-top: 70px;
+  margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 200px;
+
 }
 .login_formulario {
   width: 95%;
