@@ -77,7 +77,7 @@ html {
   color: var(--verdeClaro);
 }
 .home_portada2_img {
-  width: 19vh;
+  width: 185px;
   position: absolute;
   top: 0;
 }
@@ -100,8 +100,8 @@ html {
   animation: scroll 20s linear infinite;
 }
 .home_slide_track img {
-  width: 19vh;
-  margin-left: 15.4em;
+  width: 185px;
+  margin-left: 246px;
 }
 
 @keyframes scroll {
@@ -109,22 +109,22 @@ html {
     transform: translateX(300px);
   }
   15% {
-    transform: translateX(-125px);
+    transform: translateX(-124.8px);
   }
   30% {
-    transform: translateX(-125px);
+    transform: translateX(-124.8px);
   }
   45% {
-    transform: translateX(-546px);
+    transform: translateX(-554px);
   }
   60% {
-    transform: translateX(-546px);
+    transform: translateX(-554px);
   }
   75% {
-    transform: translateX(-971px);
+    transform: translateX(-983.2px);
   }
   100% {
-    transform: translateX(-971px);
+    transform: translateX(-983.2px);
   }
 }
 /* Guia */
