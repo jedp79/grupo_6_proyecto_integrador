@@ -1,4 +1,4 @@
-# Retrospectiva del grupo 6
+# Retrospectiva GRUPO 6
 
 Utilizando el método sugerido de la “estrella de mar” desarrollamos en base a las 5 partes que la componen.
 
