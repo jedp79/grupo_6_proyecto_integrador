@@ -67,7 +67,15 @@ html {
 .home_navegador_links a:hover {
   color: var(--verdeBlanco);
 }
-
+.home_cabecera_btn button:nth-child(2) {
+  display: none;
+}
+.home_cabecera_btn button:last-child {
+  display: none;
+}
+.bx-cart-alt {
+  display: none !important;
+}
 /* PORTADA 2 */
 .home_portada2 h3 {
   font-size: 1.5rem;
@@ -287,12 +295,65 @@ html {
     height: unset;
     overflow: unset;
   }
+  .home_navegador_links li:nth-child(2) {
+    display: none;
+  }
+  .home_navegador_links li:last-child {
+    display: none;
+  }
   .home_navegador_links {
     display: flex;
     list-style: none;
   }
   .home_navegador_links a {
     margin-left: 1.5em;
+  }
+  .home_cabecera_btn {
+    position: absolute;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .home_cabecera_btn button:nth-child(2) {
+    display: unset;
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.55em;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 900;
+  }
+  .home_cabecera_btn button:last-child {
+    display: unset;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 900;
+  }
+  .home_cabecera_btn button:nth-child(2):hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5em;
+  }
+  .home_cabecera_btn button:last-child:hover {
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.55em;
+    color: black;
+  }
+  .bx-cart-alt {
+    display: unset !important;
+    font-size: 2.5rem;
+    color: white;
+  }
+  .bx-cart-alt:hover {
+    cursor: pointer;
+    color: var(--verdeMedio);
   }
 
   /* Portada */
