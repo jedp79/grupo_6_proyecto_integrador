@@ -4,7 +4,7 @@ font-family: 'Roboto Slab', serif; */
   --verdeOscuro: #2a0944;
   --verdeMedio: #fec260;
   --verdeClaro: #3b185f;
-  --verdeBlanco: #f3f1f5;
+  --verdeBlanco: #eadffd;
 }
 .home_cabecera {
   width: 100%;
@@ -55,17 +55,22 @@ font-family: 'Roboto Slab', serif; */
 }
 .login_formulario button {
   margin-top: 1em;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: var(--verdeMedio);
   border: 3px solid var(--verdeMedio);
   border-radius: 5px;
   padding: 0.5em;
   font-size: 1rem;
-  color: var(--verdeMedio);
+  /* color: var(--verdeMedio); */
+  color: white;
   cursor: pointer;
+  transition: all 0.3s;
 }
 .login_formulario button:hover {
-  background-color: var(--verdeMedio);
-  color: white;
+  /* background-color: var(--verdeMedio);
+  color: white; */
+  background-color: transparent;
+  color: var(--verdeMedio);
 }
 @media (min-width: 550px) {
   .login_formulario {

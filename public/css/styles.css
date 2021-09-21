@@ -17,7 +17,8 @@ html {
   --verdeOscuro: #2a0944;
   --verdeMedio: #fec260;
   --verdeClaro: #3b185f;
-  --verdeBlanco: #f3f1f5;
+  /* --verdeBlanco: #f3f1f5; */
+  --verdeBlanco: #eadffd;
 }
 
 /* ===HOME=== */
@@ -82,7 +83,7 @@ html {
   text-align: center;
   margin: 2em 0;
   font-family: "Roboto Slab", serif;
-  color: var(--verdeClaro);
+  color: black;
 }
 .home_portada2_img {
   width: 185px;
@@ -90,7 +91,7 @@ html {
   top: 0;
 }
 .home_slide {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   height: 400px;
   position: relative;
@@ -138,7 +139,7 @@ html {
 /* Guia */
 .home_guia {
   width: 100%;
-  background-color: var(--verdeMedio);
+  background-color: var(--verdeOscuro);
 }
 .home_guia_contenedor {
   width: 90%;
@@ -181,12 +182,14 @@ html {
 .home_tutorial h2 {
   margin-top: 2em;
   font-size: 1.5rem;
-  color: var(--verdeClaro);
+  /* color: var(--verdeClaro); */
+  color: black;
 }
 .home_tutorial_subrayado {
   height: 0.3em;
   width: 12em;
-  background-color: var(--verdeClaro);
+  /* background-color: var(--verdeClaro); */
+  background-color: black;
   border-radius: 3px;
   margin-top: 0.2em;
 }
@@ -317,39 +320,45 @@ html {
   }
   .home_cabecera_btn button:nth-child(2) {
     display: unset;
-    background-color: white;
-    border: 1px solid black;
-    padding: 0.55em;
+    background-color: var(--verdeMedio);
+    border: 2px solid var(--verdeMedio);
+    border-radius: 3px;
+    padding: 0.5em;
     font-size: 1.2rem;
     cursor: pointer;
-    font-weight: 900;
+    /* font-weight: 900; */
+    color: white;
+    transition: all 0.3s;
   }
   .home_cabecera_btn button:last-child {
     display: unset;
+    border-radius: 3px;
     background-color: transparent;
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
     padding: 0.5em;
     font-size: 1.2rem;
     cursor: pointer;
-    font-weight: 900;
+    /* font-weight: 900; */
+    transition: all 0.3s;
   }
   .home_cabecera_btn button:nth-child(2):hover {
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
+    background-color: white;
+    border: 2px solid white;
+    color: var(--verdeMedio);
     padding: 0.5em;
   }
   .home_cabecera_btn button:last-child:hover {
     background-color: white;
-    border: 1px solid black;
-    padding: 0.55em;
-    color: black;
+    border: 2px solid white;
+    color: var(--verdeOscuro);
+    padding: 0.5em;
   }
   .bx-cart-alt {
     display: unset !important;
     font-size: 2.5rem;
     color: white;
+    transition: all 0.3s;
   }
   .bx-cart-alt:hover {
     cursor: pointer;
