@@ -7,6 +7,7 @@
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="/css/styles.css"> 
     <link rel="stylesheet" href="/css/carrito.css"> 
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/d1b23dad08.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,57 +15,74 @@
 </head>
 <body class="body-carrito">
 
-<!-- CABECERA -->
-    <header>
-        <section class="home_cabecera">
-            <div class="home_cabecera_titulo">
-                <h1>OWN STYLE</h1>
-                <i class='bx bx-menu'></i>
-            </div>
-            <nav class="home_navegador">
-                <ul class="home_navegador_links">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="#">Editor</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                </ul>
-            </nav>
-        </section>    
-    
-    </header>
+<!--CABECERA-->
+<section class="home_cabecera">
+    <div class="home_cabecera_titulo">
+        <h1>OWN STYLE</h1>
+        <i class='bx bx-menu'></i>
+    </div>
+    <nav class="home_navegador">
+        <ul class="home_navegador_links">
+            <li><a href="/">HOME</a></li>
+            <li><a href="#home_fin_guia">TUTORIAL</a></li>
+            <li><a href="#">INGRESAR</a></li>
+        </ul>
+    </nav>
+    <div class="home_cabecera_btn">
+        <i class='bx bx-cart-alt'></i>
+        <button>Ingresar</button>
+        <button>Registrarte</button>
+    </div>
+</section>
 
 <div class="carrito_fondo">
 <section class="carrito"> 
 
-    <!-- CARRITO LADO IZQ -->
-   <div class="carrito-detalle-producto">  
-        <img src="/images/stade.jpg" class="remera">
-        <ul class="carrito-nombre-descripcion" >
-            <li class="carrito-nombre-producto" > Remera Stade Francais </li>
-            <li class="carrito-descripcion-producto"> Año 2017, tela spandex </li>   
-        </ul>
-    </div>
-<!-- CARRITO LADO DER     -->
-    <div class="carrito-cantidad">
-       
-           <h1 class="cantidad" >Cantidad</h1>
-           <h2 class="cantidad-numero"> 1 </h2>
-           <h1 class="precio"> $1700  </h1>
-      
+<!-- CARRITO -->
 
-    </div>
+<section class="carrito carrito-arreglo " > 
 
-    <!-- BOTONES DE CONFIRMACION -->
-    <div class="carrito-botones">
-        <h1 class="boton-confirmar"> Confirmar Compra </h1>
-        <h1 class="boton-cancelar"> Cancelar   </h1>
-    </div>
+    <div class="carrito-detalle-producto">  
+         <img src="/images/stade.jpg" class="remera">
+     </div>
 
+    <div class="carrito-sin-logo">
+     <ul class="carrito-nombre-descripcion" >
+             <li class="carrito-nombre-producto" > Remera Stade Francais </li>
+             <li class="carrito-descripcion-producto"> Año 2017, tela spandex </li>   
+     </ul>
+ 
+ 
+ 
+<!-- CANTIDAD Y PRECIO  -->
+     <div class="carrito-cantidad-precio">
+        <form action="/cantidad" method="GET" class="">
+          <label class="cantidad">Cantidad:</label>
+           <select name="color">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+           </select>
+        </form>
+        <h1 class="precio"> $1700  </h1>
+      </div>
 
+<!-- BOTONES DE CONFIRMACION -->
+     <div class="carrito-botones">
+         <button class="boton-confirmar"> Confirmar Compra </button>
+         <button class="boton-cancelar"> Cancelar </button>
+     </div>
+ 
+ </div>
 </section>
-</div>
-    <!--FOOTER-->
-    
-    <section class="home_footer">
+</section>
+
+<!--FOOTER-->
+ <section class="home_footer arreglo">
         <div class="home_footer_izquierda">
             <h2>OWN STYLE</h2>
             <div class="home_footer_izquierda_redes">
@@ -81,7 +99,7 @@
                 <li><a href="#">COMPRAR</a></li>
             </ul>
         </div>
-    </section>
+</section> 
    
  </body>
 </html>
