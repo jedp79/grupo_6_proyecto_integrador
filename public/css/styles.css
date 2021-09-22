@@ -77,6 +77,9 @@ html {
 .bx-cart-alt {
   display: none !important;
 }
+.home_cabecera_btn a {
+  text-decoration: none;
+}
 /* PORTADA 2 */
 .home_portada2 h3 {
   font-size: 1.5rem;
@@ -318,7 +321,7 @@ html {
     align-items: center;
     gap: 8px;
   }
-  .home_cabecera_btn button:nth-child(2) {
+  .home_cabecera_btn a:nth-child(2) {
     display: unset;
     background-color: var(--verdeMedio);
     border: 2px solid var(--verdeMedio);
@@ -330,7 +333,7 @@ html {
     color: white;
     transition: all 0.3s;
   }
-  .home_cabecera_btn button:last-child {
+  .home_cabecera_btn a:last-child {
     display: unset;
     border-radius: 3px;
     background-color: transparent;
@@ -342,13 +345,13 @@ html {
     /* font-weight: 900; */
     transition: all 0.3s;
   }
-  .home_cabecera_btn button:nth-child(2):hover {
+  .home_cabecera_btn a:nth-child(2):hover {
     background-color: white;
     border: 2px solid white;
     color: var(--verdeMedio);
     padding: 0.5em;
   }
-  .home_cabecera_btn button:last-child:hover {
+  .home_cabecera_btn a:last-child:hover {
     background-color: white;
     border: 2px solid white;
     color: var(--verdeOscuro);
