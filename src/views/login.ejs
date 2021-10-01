@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/log-regis.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body class="login_body">  
+    <!--CABECERA-->
+    <%- include('./partials/header') %>
+
+    <!--FORMULARIO LOGIN-->
+    <section class="login">
+         <form action="" class="login_formulario">
+             <h2>INICIAR SESIÓN</h2>
+             <label for="nombre">Nombre y Apellido</label>
+             <input name="nombre" type="text">
+             <br>
+             <label class="login_label" for="contraseña">Contraseña</label>
+             <input name="contraseña" type="text">
+             <button type="submit">Iniciar Sesión</button>
+         </form>
+    </section>
+    <!--FOOTER-->
+    <%- include('./partials/footer') %>
+
+    
+</body>
+</html>

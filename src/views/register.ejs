@@ -12,24 +12,8 @@
 
 <body class="login_body">
     <!--CABECERA-->
-    <section class="home_cabecera">
-        <div class="home_cabecera_titulo">
-            <h1>OWN STYLE</h1>
-            <i class='bx bx-menu'></i>
-        </div>
-        <nav class="home_navegador">
-            <ul class="home_navegador_links">
-                <li><a href="/">HOME</a></li>
-                <li><a href="#home_fin_guia">TUTORIAL</a></li>
-                <li><a href="#">INGRESAR</a></li>
-            </ul>
-        </nav>
-        <div class="home_cabecera_btn">
-            <a href="/productCart"><i class='bx bx-cart-alt'></i></a>
-            <a href="/login">Ingresar</a>
-            <a href="/register">Registrarte</a>
-        </div>
-    </section>
+    <%- include('./partials/header') %>
+
     <!--FORMULARIO LOGIN-->
     <section class="login">
         <form action="" class="login_formulario">
@@ -53,24 +37,8 @@
         </form>
     </section>
     <!--FOOTER-->
-    <section class="home_footer">
-        <div class="home_footer_izquierda">
-            <h2>OWN STYLE</h2>
-            <div class="home_footer_izquierda_redes">
-                <i class='bx bxl-instagram'></i>
-                <i class='bx bxl-twitter'></i>
-                <i class='bx bxl-facebook-square'></i>
-            </div>
-        </div>
-        <div class="home_footer_derecha">
-            <ul>
-                <li><a href="#">SOBRE NOSOTROS</a></li>
-                <li><a href="#">CONTACTO</a></li>
-                <li><a href="#">Q&A</a></li>
-                <li><a href="#">COMPRAR</a></li>
-            </ul>
-        </div>
-    </section>
+    <%- include('./partials/footer') %>
+
 </body>
 
 </html>

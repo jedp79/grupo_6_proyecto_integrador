@@ -68,10 +68,10 @@ html {
 .home_navegador_links a:hover {
   color: var(--verdeBlanco);
 }
-.home_cabecera_btn button:nth-child(2) {
+.home_cabecera_btn a:nth-child(2) {
   display: none;
 }
-.home_cabecera_btn button:last-child {
+.home_cabecera_btn a:last-child {
   display: none;
 }
 .bx-cart-alt {
