@@ -13,6 +13,12 @@ const controlador = {
     },
     productDetail: (req, res) => {
         res.render('productDetail');
+    },
+    catalogo: (req, res) => {
+        res.render('catalogo');
+    },
+    cargar: (req, res) => {
+        res.render('carga');
     }
 }
 

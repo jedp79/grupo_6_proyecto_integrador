@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif; */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+:root {
+  --colorPrincipal: #2a0944;
+  --colorSecundario: #3b185f;
+  --colorExtra: #fec260;
+  --colorFondo: #eadffd;
+}
+
+/* Catalogo */
+.fondoCatalogo {
+  min-height: calc(100vh - 124px);
+  background-color: var(--colorFondo);
+  overflow: hidden;
+}
+.catalogo_titulo {
+  padding-top: 6rem;
+  text-align: center;
+  color: black;
+}
+.catalogo {
+  width: 95vw;
+  max-width: 900px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.catalogo_producto {
+  width: 90%;
+  max-width: 400px;
+  height: 250px;
+  padding: 10px;
+  border: 5px solid var(--colorPrincipal);
+  border-radius: 12px;
+  margin: 10px 0;
+  text-align: center;
+  transition: padding 0.3s;
+}
+.catalogo_remera img {
+  filter: drop-shadow(0 0 1px black);
+}
+.catalogo_producto img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+.catalogo_producto a {
+  text-decoration: none;
+}
+.catalogo_producto p {
+  color: black;
+}
+
+.catalogo_producto:hover {
+  border-color: var(--colorSecundario);
+  padding: 15px;
+}
+
+@media (min-width: 500px) {
+  .catalogo {
+    gap: 10px;
+  }
+  .catalogo_producto {
+    width: 45%;
+  }
+}
+@media (min-width: 732px) {
+  .catalogo_titulo {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+}

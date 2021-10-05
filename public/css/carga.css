@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif; */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+:root {
+  --colorPrincipal: #2a0944;
+  --colorSecundario: #3b185f;
+  --colorExtra: #fec260;
+  --colorFondo: #eadffd;
+}
+
+/* Formulario */
+.formulario {
+  background-color: var(--colorFondo);
+  min-height: calc(100vh - 124px);
+  padding-top: 6rem;
+}
+.form {
+  width: 95%;
+  margin: 0 auto;
+  border: 5px solid var(--colorPrincipal);
+  border-radius: 12px;
+  text-align: center;
+  padding: 1em;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 10px black;
+}
+.form h2 {
+  justify-self: center;
+  font-size: 1.5rem;
+  margin: 0 0 1em 0;
+  color: var(--colorExtra);
+}
+.form input {
+  padding: 0.1em;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  border: 1px solid var(--colorPrincipal);
+}
+.form label {
+  display: block;
+  margin: 0.5em 0;
+}
+.form button {
+  margin-top: 1em;
+  background-color: var(--colorExtra);
+  border: 3px solid var(--colorExtra);
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form button:hover {
+  background-color: transparent;
+  color: var(--colorExtra);
+}
+
+@media (min-width: 550px) {
+    .formulario{
+        padding-top: 9rem;
+    }
+    .form {
+        max-width: 40rem;
+        padding: 4em 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .form h2 {
+        font-size: 2rem;
+        grid-column: span 4;
+    }
+    .form input {
+        width: 100%;
+        height: fit-content;
+        display: inline-block;
+        font-size: 1.2rem;
+        align-self: center;
+        grid-column: 3 / 4;
+    }
+    .form label {
+        display: inline-block;
+        font-size: 1.2rem;
+        grid-column: 2 / 3;
+        text-align: start;
+        align-self: center;
+    }
+    .form button {
+        margin: 1em auto;
+        font-size: 1.2rem;
+        grid-column: span 4;
+    }
+}

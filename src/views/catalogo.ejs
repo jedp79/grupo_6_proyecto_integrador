@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/catalogo.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+</head>
+<body>
+    <!--CABECERA-->
+    <%- include('./partials/header') %>
+
+    <!--CATALOGO-->
+    <main class="fondoCatalogo">
+        <h2 class="catalogo_titulo">ELEGI EL PRODUCTO</h2>
+        <section class="catalogo">
+            <div class="catalogo_remera catalogo_producto">
+                <a href="#">
+                    <img src="/images/p1.png" alt="">
+                    <p>REMERA</p>
+                </a>
+            </div>
+            <div class="catalogo_taza catalogo_producto">
+                <a href="#">
+                    <img src="/images/p2.png" alt="">
+                    <p>GORRA</p>
+                </a>
+            </div>
+            <div class="catalogo_gorra catalogo_producto">
+                <a href="#">
+                    <img src="/images/p3.png" alt="">
+                    <p>FUNDA DE CELULAR</p>
+                </a>
+            </div>
+            <div class="catalogo_funda catalogo_producto">
+                <a href="#">
+                    <img src="/images/p4.png" alt="">
+                    <p>TAZA</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+
+    <!--FOOTER-->
+    <%- include('./partials/footer') %>
+</body>
+</html>
