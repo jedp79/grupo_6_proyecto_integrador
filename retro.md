@@ -1,3 +1,16 @@
+# Retrospectiva Sprint 3
+
+<b>1.	Comenzar a hacer</b>. Luego de empezar a crear, estructurar y diseñar nuestra pagina web notamos que hay muchas ideas creativas que pudo aportar cada integrante. Debido a esto, creemos que es necesario empezar a decidir cuales serán las mas convenientes para este proyecto. 
+
+<b>2.	Hacer más</b>. Al principio tuvimos ciertas dificultades en poder realizar una reunión semanal debido a que cada integrante tiene distintos horarios de trabajo pero al final pudimos resolverlo y sacar provecho de cada una.
+
+<b>3.	Continuar haciendo</b>. Creemos que la comunicación en un ambito de trabajo es fundamental para poder llegar a los objetivos planteados. Gracias a esto, el poder trabajar en grupo se nos hace sencillo y las dificultades se resuelven con mayor facilidad.  
+
+<b>4.	Hacer menos</b>. Seguimos buscando la simplificación de las tareas y poder hacerlas de maneras más prácticas.
+
+<b>5.	Dejar de hacer</b>. Todavía nos estamos conociendo entre nosotros por eso creemos que seguimos tardando demasiado tiempo a la hora de decidir ideas y representarlas en código.
+
+
 # Retrospectiva GRUPO 6
 
 Utilizando el método sugerido de la “estrella de mar” desarrollamos en base a las 5 partes que la componen.
