@@ -25,5 +25,5 @@
 <li><a href="https://www.dexter.com.ar/" target="_blank">Dexter</a>: los botones de las distintas categorias son faciles de leer y favorece la elección del producto.</li>
 </ol>
 
-<b>Link a trello</b><br>
-<a href="https://trello.com/b/sPMKlu2D/proyecto-dh">Trello Grupo 6<a>
+<b>Link a trello Sprint 4</b><br>
+<a href="https://trello.com/b/EHNsw07O">Trello Grupo 6<a>
