@@ -14,14 +14,14 @@
 
     <!--FORMULARIO DE CARGA-->
     <section class="formulario">
-        <form method="post" class="form">
-            <h2>CARGA UN PRODUCTO</h2>
+        <form method="POST" class="form" action="/products/<%= data.id %>/edit?_method=PUT">
+            <h2>MODIFICA UN PRODUCTO</h2>
             <label for="name">Producto</label>
-            <input name="name" type="text">
+            <input name="name" type="text" value="<%= data.name %>" >
             <label for="image">Imagen</label>
             <input name="image" type="file">
             <label for="price">Precio</label>
-            <input type="number" name="price">
+            <input type="number" name="price" value="<%= data.price %>">
             <button type="submit">GUARDAR</button>
         </form>
     </section>

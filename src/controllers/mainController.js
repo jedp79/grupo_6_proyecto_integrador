@@ -7,18 +7,6 @@ const controlador = {
     },
     register: (req, res) => {
         res.render('register');
-    },
-    productCart: (req, res) => {
-        res.render('productCart');
-    },
-    productDetail: (req, res) => {
-        res.render('productDetail');
-    },
-    catalogo: (req, res) => {
-        res.render('catalogo');
-    },
-    cargar: (req, res) => {
-        res.render('carga');
     }
 }
 

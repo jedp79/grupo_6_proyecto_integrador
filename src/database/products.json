@@ -1,0 +1,21 @@
+[{
+    "id": 1,
+    "name": "remera",
+    "image": "p1.png",
+    "price": 5000
+},{
+    "id": 2,
+    "name": "gorra",
+    "image": "p2.png",
+    "price": 3500
+},{
+    "id": 3,
+    "name": "funda",
+    "image": "p3.png",
+    "price": 2000
+},{
+    "id": 4,
+    "name": "taza",
+    "image": "p4.png",
+    "price": 2000
+}]
