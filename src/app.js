@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(methodOverride('_metod'));
+app.use(methodOverride('_method'));
 
 //Rutas
 const mainRoutes = require('./routes/mainRoutes');

@@ -105,3 +105,24 @@ html {
         grid-column: span 4;
     }
 }
+
+/* Form delete */
+.form_borrar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.form_borrar button {
+  background-color: rgb(165, 45, 45);
+  border: 3px solid rgb(165, 45, 45);
+  border-radius: 5px;
+  padding: 0.5em;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.form_borrar button:hover {
+  background-color: transparent;
+  color: rgb(165, 45, 45);
+}

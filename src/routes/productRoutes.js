@@ -11,6 +11,7 @@ router.post('/create', productControlador.upload);
 router.get('/:id', productControlador.editor);
 router.get('/:id/edit', productControlador.productEdit);
 router.put('/:id/edit', productControlador.uploadEdit);
+router.delete('/:id/edit', productControlador.deleteEdit);
 router.get('/productCart', productControlador.productCart);
 router.get('/productDetail', productControlador.productDetail);
 

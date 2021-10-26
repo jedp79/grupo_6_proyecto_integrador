@@ -41,7 +41,30 @@ const controlador = {
         res.render('productEdit', { data: { name: productToEdit.name, price: productToEdit.price, id: productToEdit.id }} )
     },
     uploadEdit: (req, res) => {
-        res.send('req.params')
+        let fileName = path.join(__dirname, '../database/products.json');
+        let allProducts = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
+
+        allProducts.map(product => {
+            if(req.params.id == product.id) {
+                product.name = req.body.name;
+                product.price = parseInt(req.body.price);
+            }
+        });
+
+        let allProductsJSON = JSON.stringify(allProducts, null, ' ');
+        fs.writeFileSync(fileName, allProductsJSON);
+
+        res.redirect('/products');
+    },
+    deleteEdit: (req, res) => {
+        let fileName = path.join(__dirname, '../database/products.json');
+        let allProducts = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
+
+        let newProductList = allProducts.filter(product => req.params.id != product.id);
+        let newProductListJSON = JSON.stringify(newProductList, null, ' ');
+        fs.writeFileSync(fileName, newProductListJSON);
+
+        res.redirect('/products');
     }
 }
 

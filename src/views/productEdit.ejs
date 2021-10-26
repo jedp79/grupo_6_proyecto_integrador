@@ -24,6 +24,9 @@
             <input type="number" name="price" value="<%= data.price %>">
             <button type="submit">GUARDAR</button>
         </form>
+        <form method="post" class='form_borrar' action="/products/<%= data.id %>/edit?_method=DELETE">
+            <button type="submit">BORRAR</button>
+        </form>
     </section>
 
     <!--FOOTER-->

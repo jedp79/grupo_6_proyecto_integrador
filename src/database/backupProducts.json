@@ -1,5 +1,11 @@
 [
  {
+  "id": 1,
+  "name": "remera",
+  "image": "p1.png",
+  "price": 4000
+ },
+ {
   "id": 2,
   "name": "gorra",
   "image": "p2.png",
