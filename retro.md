@@ -1,3 +1,15 @@
+# Retrospectiva Sprint 5
+
+<b>1.	Comenzar a hacer</b>. Debido a ciertas circunstancias que nos empezaron a perjudicar en el desarrollo de nuestra página, tomamos la decisión de cambiar un poco el rumbo de la misma. Ahora debemos enforcarnos en desarrolar de la mejor manera nuestros objetivos planteados.
+
+<b>2.	Hacer más</b>. Descubrimos el mundo de las bases de datos y todo lo relacionado a estas, es una herramienta muy importante a la hora de crear nuestros proyectos. Creemos que es necesario indagar más.
+
+<b>3.	Continuar haciendo</b>. A esta altura de la cursada y luego de distintos encuentros semanales, hemos generado una excelente relación y, por ende, una buena comunicación entre nosotros. Para llegar a nuestros objetivos debemos seguir así.
+
+<b>4.	Hacer menos</b>. Nos surgieron distintos incovenientes, creemos que el mayor causante de estos son los  objetivos planteados. Eran muy superiores en comparación a los conocimientos adquiridos para poder realizarlos.
+
+<b>5.	Dejar de hacer</b>. Necesitamos plantear ideas claras en base a nuestros conocimientos para poder aprovechar más nuestro tiempo y recursos.
+
 # Retrospectiva Sprint 4
 
 <b>1.	Comenzar a hacer</b>. Después de aprender sobre las distintas tecnologias acerca de los servidores creemos necesario indagar mas sobre este mundo tan extenso. 
