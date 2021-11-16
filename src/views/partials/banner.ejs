@@ -1,0 +1,63 @@
+<section class="banner"> 
+    <div class="banner_inner">
+
+        <!--VERSION MOBILE-->
+        <div class="banner_principal">
+            <a class="banner_principal_logo" href="/"><h2>DOLCE ROME</h2></a>
+            <i class='bx bx-menu'></i>
+            <% if (locals.isLogged) { %>
+                <a href="/user/profile" class="banner_principal_user"><i class='bx bxs-user'></i></a>
+        <% } else { %>
+            <button type="button" class="banner_principal_btn"><i class='bx bxs-user'></i></button>
+            <% } %> 
+        </div>
+        <!--OPCIONES MOBILE USER-->
+        <% if (!locals.isLogged) { %>
+            <div class="mobile_user">
+                <ul>
+                    <li><a href="/user/login">INGRESAR</a></li>
+                    <li><a href="/user/register">REGISTRAR</a></li>
+                </ul>
+            </div>
+            <% } %>
+            <!--OPCIONES MOBILE MENU-->
+            <div class="mobile_menu">
+                <li><a href="/">PRODUCTOS</a></li>
+                <li><a href="/product/cart">CARRITO</a></li>
+            </div>
+            <!--VERSION NAVEGADOR-->
+            <nav class="banner_navegador">
+                <ul>
+                    <% if (locals.isLogged) { %>
+                        <li><a href="<%= locals.isLogged ? '/user/profile' : null %>" class="banner_navegador_user"><i class='bx bxs-user'></i></a></li>
+                        <li><a href="/">PRODUCTOS</a></li>
+                        <li><a class="banner_navegador_cart" href="/product/cart">CARRITO <i class='bx bxs-cart-alt'><span><%= userLogged.cart %></span></i></a></li>
+                        <% } else { %>
+                            <li><a href="/user/login">INGRESAR</a></li>
+                            <li><a href="/user/register">REGISTRAR</a></li>
+                            <li><a href="/">PRODCUTOS</a></li>
+                            <% } %> 
+                        </ul>
+                    </nav>
+    </div>
+</section>
+<script>  
+    //Menu Btn
+    const menuBn = document.querySelector('.banner_principal .bx-menu');
+    const menuPanel = document.querySelector('.mobile_menu');
+    
+    menuBn.addEventListener('click', ()=> {
+        userPanel?.classList.remove('alturaUnset');
+        menuPanel.classList.toggle('alturaUnset');
+    });
+    
+    //User Btn 
+    const userBtn = document.querySelector('.banner_principal_btn');
+    const userPanel = document.querySelector('.mobile_user');
+
+    userBtn.addEventListener('click', ()=> {
+        menuPanel.classList.remove('alturaUnset');
+        userPanel.classList.toggle('alturaUnset');
+    });
+</script>
+

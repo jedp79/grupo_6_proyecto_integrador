@@ -2,89 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="/css/styles.css"> 
-    <link rel="stylesheet" href="/css/carrito.css"> 
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/partials.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/d1b23dad08.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
 </head>
-<body class="body-carrito">
-
-<!--CABECERA-->
-<section class="home_cabecera">
-    <div class="home_cabecera_titulo">
-        <h1>OWN STYLE</h1>
-        <i class='bx bx-menu'></i>
-    </div>
-    <nav class="home_navegador">
-        <ul class="home_navegador_links">
-            <li><a href="/">HOME</a></li>
-            <li><a href="#home_fin_guia">TUTORIAL</a></li>
-            <li><a href="/login">INGRESAR</a></li>
-            <li><a href="/register">Registrarte</a></li>
-        </ul>
-    </nav>
-    <div class="home_cabecera_btn">
-        <a href="/productCart">
-        <i class='bx bx-cart-alt'></i></a>
-        <a href="/login"><button>Ingresar</button></a>
-        <a href="/register"><button>Registrarte</button></a>
-    </div>
-</section>
-
-<div class="carrito_fondo">
-<section class="carrito"> 
-
-<!-- CARRITO -->
-
-<section class="carrito carrito-arreglo " > 
-
-    <div class="carrito-detalle-producto">  
-         <img src="/images/stade.jpg" class="remera">
-     </div>
-
-    <div class="carrito-sin-logo">
-     <ul class="carrito-nombre-descripcion" >
-             <li class="carrito-nombre-producto" > Remera Stade Francais </li>
-             <li class="carrito-descripcion-producto"> Año 2017, tela spandex </li>   
-     </ul>
- 
- 
- 
-<!-- CANTIDAD Y PRECIO  -->
-     <div class="carrito-cantidad-precio">
-        <form action="/cantidad" method="GET" class="">
-          <label class="cantidad">Cantidad:</label>
-           <select name="color">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-           </select>
-        </form>
-        <h1 class="precio"> $1700  </h1>
-      </div>
-
-<!-- BOTONES DE CONFIRMACION -->
-     <div class="carrito-botones">
-         <button class="boton-confirmar"> Confirmar Compra </button>
-         <button class="boton-cancelar"> Cancelar </button>
-     </div>
- 
- </div>
-</section>
-</section>
-
-<!--FOOTER-->
-<%- include('./partials/footer') %>
-   
- </body>
+<body>
+    <!--BANNER-->
+    <%- include('./partials/banner') %>
+    <!--PRODUCT CART-->
+    <section class="cart_background">
+        <div class="cart_right"> 
+            <h2>Carrito</h2>
+            <div class="cart_right_container">
+                <% let total = 0 %>
+                <% if (userLogged.cart > 0) { %>               
+                    <% for( let i = 0; i < products.length; i++ ) { %>
+                        <div class="cart_right_product">
+                            <div class="cart_right_product_img">
+                                <img src="/images/products/<%= products[i].products.img %>" alt="">
+                            </div>
+                            <div class="cart_right_product_info">
+                                <p><%= products[i].products.name %></p>
+                                <p>$<%= products[i].products.price %></p>
+                                <form method="POST" action="/product/<%= products[i].products.id %>/delete?_method=DELETE">
+                                    <button type="submit">Borrar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <% total = total + parseInt(products[i].products.price) %> 
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+        <div class="cart_left">
+            <div class="cart_left_container">
+                <p>Detalles</p>
+                <p>Productos: <span><%= userLogged.cart > 0 ? products.length : 0 %></span></p>
+                <p>Total: <span>$<%= total %></span></p>
+                <a href="">Comprar</a>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <%- include('./partials/footer') %> 
+</body>
 </html>

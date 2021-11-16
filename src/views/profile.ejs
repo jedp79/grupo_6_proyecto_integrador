@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/partials.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <!--BANNER-->
+    <%- include('./partials/banner') %>
+    <!--PROFILE-->
+    <section class="profile">
+        <h2>PERFIL</h2>
+        <p>Hola <span><%= user.name %></span>!</p>
+        <p class="profile_email">Email: <span><%= user.email %></span></p>
+        <a href="/user/logout">Cerrar Sesión</a>
+    </section>
+    <!--FOOTER-->
+    <%- include('./partials/footer') %>
+</body>
+</html>

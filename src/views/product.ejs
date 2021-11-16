@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/partials.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!--BANNER-->
+    <%- include('./partials/banner') %>
+    <!--PRODUCT-->
+    <section class="product_background">
+        <div class="product">
+            <h2><%= locals.product ? locals.product.name : null %></h2>
+            <div class="product_details">
+                <div class="product_detail_img">
+                    <img src="/images/products/<%= locals.product ? locals.product.img : null %>" alt="">
+                </div>
+                <div class="product_details_pay">
+                    <p><%= locals.product ? locals.product.description : null %></p>
+                    <span>$<%= locals.product ? locals.product.price : null %> </span>
+                    <a href="">Comprar</a>
+                    <form action="/product/<%= locals.product ? locals.product.id : null %>" method="POST">
+                        <button class="product_addToCart" type="submit">Añadir al carrito</button>
+                    </form>
+                    <!--POP UP-->
+                    <% if (locals.popup && popup != null) { %>
+                        <div class="product_popup"><%= locals.popup %></div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info">
+            <div class="info_div">
+                <i class='bx bxl-whatsapp'></i>
+                <div>
+                    <p>Whatsapp:</p>
+                    <span>11 1234 5678</span>
+                </div>
+            </div>
+            <div class="info_div info_card">
+                <i class='bx bxs-credit-card'></i>
+                <p>Todos los medios de pago</p>
+            </div>
+            <div class="info_div">
+                <i class='bx bxs-phone'></i>
+                <div>
+                    <p>Tel:</p>
+                    <span>11 1234 5678</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="related">
+            <h3>PORDUCTOS RELACIONADOS</h3>
+            <div class="related_underline"></div>
+            <div class="related_grid">
+                <% for( let i = 0; i < related.length; i++ ) { %>
+                    <div class="related_product">
+                        <div class="related_product_img">
+                            <img src="/images/products/<%= related[i].img %>" alt="">
+                        </div>
+                        <a href="/product/<%= related[i].id %>">ver mas</a>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+        <!--FOOTER-->
+        <%- include('./partials/footer') %> 
+</body>
+</html>
+<script>
+    const popup = document.querySelector('.product_popup');
+        
+    document.addEventListener('DOMContentLoaded', ()=> {
+        setTimeout(()=> {
+            popup?.classList.add('opacityZero')
+        }, 3000);
+    })
+</script>

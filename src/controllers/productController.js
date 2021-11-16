@@ -1,71 +1,106 @@
-const path = require('path');
-const fs = require('fs');
+//Base de datos
+const db = require('../database/models');
 
-const controlador = {
-    productCart: (req, res) => {
-        res.render('productCart');
+//Sequelize
+const { Op } = require('sequelize');
+const { sequelize } = require('../database/models');
+
+const controller = {
+    productUpload: (req, res)=> {
+        res.render('productUpload');
     },
-    productDetail: (req, res) => {
-        res.render('productDetail');
-    },
-    catalogo: (req, res) => {
-        res.render('catalogo');
-    },
-    create: (req, res) => {
-        res.render('carga');
-    },
-    upload: (req, res) => {
-        let fileName = path.join(__dirname, '../database/products.json');
-        let allProducts = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
-        let idNew = allProducts.pop().id + 1;
-        let nuevoProducto = {
-            id: idNew,
+    createProduct: (req, res)=> {
+        db.Products.create({
             name: req.body.name,
-            image: null,
-            price: req.body.price
+            price: req.body.price,
+            img: req.file.filename,
+            category: req.body.category,
+            description: req.body.description
+        }).then(()=> {
+            return res.redirect('/');
+        }).catch(error => {
+            console.log(error);
+            res.send(error);
+        })
+    },
+    showProduct: (req, res)=> {
+        let productSelected = db.Products.findOne({ where: { id: req.params.id }});
+        let relatedProducts = db.Products.findAll({ where: { [Op.not]: { id: req.params.id } }, limit: 5 });
+        
+        let msg = null;
+        if(req.params.action == 'add'){
+            msg = 'Producto añadido'
         }
-        allProducts.push(nuevoProducto)
-        let allProductsJSON = JSON.stringify(allProducts, null, ' ');
-        fs.writeFileSync(fileName, allProductsJSON);
 
-        res.redirect('/products/create');
+        Promise.all([productSelected, relatedProducts])
+            .then(([resultProduct, resultRelated])=> {
+                return res.render('product', { product: resultProduct, related: resultRelated, popup: msg })
+            }).catch(error => {
+                console.log(error);
+                res.send(error);
+            })
     },
-    editor: (req, res) => {
-        let idProducto = req.params.id;
-        res.render('editor', { products: idProducto });
-    },
-    productEdit: (req, res) => {
-        let fileName = path.join(__dirname, '../database/products.json');
-        let allProducts = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
-        let productToEdit = allProducts.find(product => req.params.id == product.id);
-        res.render('productEdit', { data: { name: productToEdit.name, price: productToEdit.price, id: productToEdit.id }} )
-    },
-    uploadEdit: (req, res) => {
-        let fileName = path.join(__dirname, '../database/products.json');
-        let allProducts = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
-
-        allProducts.map(product => {
-            if(req.params.id == product.id) {
-                product.name = req.body.name;
-                product.price = parseInt(req.body.price);
-            }
+    addToCart: (req, res)=> {
+        let useProductCreate = db.UserProduct.create({
+            user_id: req.session.userLogged.id,
+            product_id: req.params.id
         });
 
-        let allProductsJSON = JSON.stringify(allProducts, null, ' ');
-        fs.writeFileSync(fileName, allProductsJSON);
+        req.session.userLogged.cart = req.session.userLogged.cart + 1
 
-        res.redirect('/products');
+        let userUpdate = db.Users.update({
+            cart: req.session.userLogged.cart
+        },{
+            where: { id: req.session.userLogged.id }
+        });
+        
+        Promise.all([useProductCreate, userUpdate])
+            .then(()=> {
+                return res.redirect(`/product/${req.params.id}/add`);
+            })
+            .catch(error => {
+                console.log(error);
+                res.send(error);
+            })  
     },
-    deleteEdit: (req, res) => {
-        let fileName = path.join(__dirname, '../database/products.json');
-        let allProducts = JSON.parse(fs.readFileSync(fileName, 'utf-8'));
+    productCart: (req, res)=> {
+        db.Users.findAll({ 
+            include: [{ association: 'products' }], 
+            raw: true, 
+            nest: true, 
+            where: { id: req.session.userLogged.id } 
+        })
+        .then(products => {
+            console.log(products)
+            return res.render('productCart', { products: products });
+        })
+         .catch(error => {
+            console.log(error);
+            res.send(error);
+        })
+    },
+    removeFromCart: (req, res)=> {
+        req.session.userLogged.cart = parseInt(req.session.userLogged.cart) - 1
 
-        let newProductList = allProducts.filter(product => req.params.id != product.id);
-        let newProductListJSON = JSON.stringify(newProductList, null, ' ');
-        fs.writeFileSync(fileName, newProductListJSON);
+        let userUpdate = db.Users.update({
+            cart: req.session.userLogged.cart 
+        },{
+            where: { id: req.session.userLogged.id }
+        })
 
-        res.redirect('/products');
+        let userProductDelete = db.UserProduct.destroy({
+            where: { user_id: req.session.userLogged.id, product_id: req.params.id  }
+        })
+        
+        Promise.all([userUpdate, userProductDelete])
+            .then(()=> {
+                return res.redirect('/product/cart');
+            })
+            .catch(error => {
+                console.log(error);
+                res.send(error);
+            })
     }
 }
 
-module.exports = controlador;
+module.exports = controller;

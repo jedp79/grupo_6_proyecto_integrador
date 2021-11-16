@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/partials.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOLCE ROME</title>
+</head>
+<body>
+    <!--BANNER-->
+    <%- include('./partials/banner') %>
+    <!--PORTADA-->
+    <%- include('./partials/portada')  %> 
+    <!--CATALOGO-->
+    <main class="catalogo">
+        <section class="filtros">
+            <section class="filtros_inner">
+                <div>
+                    <h3>Productos</h3>
+                </div>
+                <ul>
+                    <li class="inv filtros_btn <%= !locals.category ? 'filtro_selected' : null %>"><form action="/" method="GET"><button type="submit">Mostrar todo</button></form></li>
+                    <li class="inv filtros_btn <%= locals.category && category == 'tortas' ? 'filtro_selected' : null %>"><form action="/tortas" method="GET"><button type="submit">Tortas</button></form></li>
+                    <li class="inv filtros_btn <%= locals.category && category == 'muffins' ? 'filtro_selected' : null %>"><form action="/muffins" method="GET"><button type="submit">Muffins</button></form></li>
+                    <li class="inv filtros_btn <%= locals.category && category == 'galletas' ? 'filtro_selected' : null %>"><form action="/galletas" method="GET"><button type="submit">Galletas</button></form></li>
+                    <li class="filtros_btn_form displayNone">
+                        <form action="/search" method="POST">
+                            <input name="search" type="text" placeholder="buscar...">
+                            <button type="submit"><i class='bx bx-search-alt-2'></i></button>
+                        </form>
+                    </li>
+                    <li class="filtros_btn"><button><i class='bx bx-search-alt-2'></i></button></li>
+                </ul>
+                <form class="filtros_search" action="/search" method="POST">
+                    <input name="search" type="text" placeholder="buscar...">
+                    <button type="submit"><i class='bx bx-search-alt-2'></i></button>
+                </form>
+            </section>
+        </section>
+        <section class="menu">
+            <div class="menu_grid">
+                <% for( let i = 0; i < products.length ; i++ ) { %>      
+                    <div class="menu_producto">
+                        <div class="menu_producto_imagen">
+                            <img src="/images/products/<%= products[i].img %>" alt="">
+                        </div>
+                        <div class="menu_producto_info">
+                            <div>
+                                <span>$<%= products[i].price %></span>
+                                <p><%= products[i].name %></p>
+                            </div>
+                            <a href=""><i class='bx bxs-cart-alt'></i></i></a>
+                        </div>
+                        <a class="menu_producto_mas" href="/product/<%= products[i].id %>/show">ver mas</a>
+                    </div>
+                <% } %>
+                <% if (products.length % 2 !== 0) { %>
+                    <div class="menu_producto invisible"></div>
+                <% } %>
+            </div>
+        </section>
+    </main>
+    <!--FOOTER-->
+    <%- include('./partials/footer') %>
+</body>
+</html>
+<script>
+    //Filtros Seearch Bar
+    const searchBtn = document.querySelector('.filtros_btn .bx-search-alt-2');
+    const filtrosBtn = document.querySelectorAll('.inv');
+    const filtrosForm = document.querySelector('.filtros_btn_form');
+
+    searchBtn.addEventListener('click', ()=> {
+        filtrosBtn.forEach(btn => {
+            btn.classList.toggle('displayNone');
+        });
+        filtrosForm.classList.toggle('displayNone');
+        
+        searchBtn.classList.toggle('bx-search-alt-2');
+        searchBtn.classList.toggle('bx-x');
+   });
+</script>

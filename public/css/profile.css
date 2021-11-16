@@ -1,0 +1,50 @@
+/* ===FONTS=== */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* ===ROOTS=== */
+:root {
+  --colorPrincipal: #b91646;
+  --colorSecundario: #574143;
+  --colorFondo: #eee1ba;
+
+  --fontHeader: 2.5rem;
+  --fontDefault: 2rem;
+  --fontSecondary: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===PROFILE=== */
+.profile {
+  background-color: var(--colorFondo);
+  min-height: calc(100vh - 159px);
+  padding: 70px 0 0 10px;
+}
+.profile h2 {
+  color: var(--colorPrincipal);
+  margin-bottom: 10px;
+}
+.profile_email {
+  margin-bottom: 20px;
+}
+.profile a {
+  text-decoration: none;
+  font-size: var(--fontSecondary);
+  font-weight: 800;
+  padding: 0.2em;
+  background-color: white;
+  border: 1px solid var(--colorPrincipal);
+  color: var(--colorPrincipal);
+  cursor: pointer;
+}
+
+@media (min-width: 650px) {
+  .profile {
+    min-height: calc(100vh - 87px);
+  }
+}

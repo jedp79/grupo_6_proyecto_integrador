@@ -1,0 +1,218 @@
+/* ===FONTS=== */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* ===ROOTS=== */
+:root {
+  --colorPrincipal: #b91646;
+  --colorSecundario: #574143;
+  --colorFondo: #eee1ba;
+
+  --fontHeader: 2.5rem;
+  --fontDefault: 2rem;
+  --fontSecondary: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.invisible {
+  opacity: 0;
+}
+.displayNone {
+  display: none;
+}
+
+/* ===CATALOGO=== */
+.catalogo {
+  background-color: var(--colorFondo);
+  min-height: calc(100vh - 159px - 200px);
+}
+.filtros {
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+.filtros_inner {
+  width: 90%;
+  max-width: 1000px;
+}
+.filtros h3 {
+  text-align: center;
+  color: var(--colorPrincipal);
+  font-weight: 400;
+  padding: 8px;
+  background-color: white;
+  font-size: var(--fontDefault);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+}
+.filtros ul {
+  background-color: white;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  color: var(--colorSecundario);
+}
+.filtros li {
+  padding: 2px;
+}
+.filtros button {
+  background-color: transparent;
+  border: transparent;
+  color: var(--colorSecundario);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.filtro_selected {
+  border-bottom: 1px solid grey;
+}
+.filtros_search {
+  display: none;
+  margin-left: auto;
+  align-items: center;
+}
+.filtros_search input {
+  border: none;
+  font-size: 1.1rem;
+  padding: 2px;
+  color: var(--colorSecundario);
+}
+.filtros_search input::placeholder {
+  color: var(--colorPrincipal);
+}
+.filtros_search input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--colorPrincipal);
+}
+.filtros_search i {
+  font-size: 1.2rem;
+}
+.filtros ul li:last-child {
+  padding-top: 3.5px;
+}
+.filtros_btn_form form {
+  display: flex;
+  align-items: center;
+}
+.filtros_btn_form input {
+  padding: 2px;
+  border: none;
+  border-bottom: 1px solid var(--colorPrincipal);
+  font-size: 1.1rem;
+}
+.filtros_btn_form input::placeholder {
+  color: var(--colorPrincipal);
+}
+.filtros_btn_form input:focus {
+  outline: none;
+}
+.filtros_btn_form button {
+  font-size: 1.2rem;
+}
+.filtros .bx-x {
+  font-size: 1.3rem;
+}
+
+.menu_grid {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+.menu_producto {
+  background-color: white;
+  width: 250px;
+  height: fit-content;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu_producto_imagen {
+  width: 240px;
+  height: 150px;
+  margin-bottom: 2px;
+}
+.menu_producto_imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu_producto_info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.menu_producto_info div {
+  color: var(--colorSecundario);
+}
+.menu_producto_info span {
+  font-weight: 700;
+  font-size: var(--fontSecondary);
+}
+.menu_producto_info p {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+.menu_producto .bxs-cart-alt {
+  color: var(--colorSecundario);
+  font-size: 1.5rem;
+}
+.menu_producto_mas {
+  text-decoration: none;
+  background-color: var(--colorPrincipal);
+  color: white;
+  padding: 0.25em;
+  width: 100%;
+  text-align: center;
+  font-size: var(--fontSecondary);
+}
+.menu_producto_mas:hover {
+  background-color: #b91647e5;
+}
+
+@media (min-width: 650px) {
+  .catalogo {
+    min-height: calc(100vh - 350px - 87px);
+  }
+}
+
+@media (min-width: 1000px) {
+  .filtros_search {
+    display: flex;
+  }
+  .filtros_inner {
+    background-color: white;
+    display: flex;
+    align-items: center;
+  }
+  .filtros li {
+    height: 100%;
+    padding: 18px;
+  }
+  .filtro_selected {
+    border-bottom: none;
+    background-color: rgba(128, 128, 128, 0.34);
+  }
+  .filtros h3 {
+    border-right: 1px solid rgba(128, 128, 128, 0.637);
+    border-bottom: none;
+  }
+  .filtros ul li:last-child {
+    display: none;
+  }
+  .inv {
+    display: unset !important;
+  }
+  .filtros_btn_form {
+    display: none !important;
+  }
+}

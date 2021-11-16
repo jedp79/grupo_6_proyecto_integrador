@@ -1,0 +1,116 @@
+/* ===FONTS=== */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* ===ROOTS=== */
+:root {
+  --colorPrincipal: #b91646;
+  --colorSecundario: #574143;
+  --colorFondo: #eee1ba;
+
+  --fontHeader: 2.5rem;
+  --fontDefault: 2rem;
+  --fontSecondary: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===CART=== */
+.cart_background {
+  min-height: calc(100vh - 159px);
+  background-color: var(--colorFondo);
+  padding: 70px 10px 10px 10px;
+}
+.cart_right {
+}
+.cart_right h2 {
+  color: var(--colorPrincipal);
+  margin-bottom: 10px;
+}
+.cart_right_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cart_right_product {
+  background-color: white;
+  display: flex;
+  padding: 2px;
+  gap: 2px;
+}
+.cart_right_product_img {
+  width: 90px;
+  height: 90px;
+}
+.cart_right_product_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cart_right_product_info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cart_right_product_info p {
+  color: var(--colorSecundario);
+}
+.cart_right_product_info p:first-child {
+  font-weight: 700;
+}
+.cart_right_product_info form {
+  margin-top: auto;
+  text-align: right;
+}
+.cart_right_product_info button {
+  background-color: var(--colorSecundario);
+  border: transparent;
+  color: white;
+  padding: 0.2em;
+  cursor: pointer;
+}
+
+.cart_left_container {
+  color: var(--colorSecundario);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cart_left_container p:first-child {
+  margin-top: 10px;
+  font-weight: 700;
+}
+.cart_left_container a {
+  text-decoration: none;
+  background-color: var(--colorPrincipal);
+  color: white;
+  padding: 0.2em;
+  text-align: center;
+  margin-top: 10px;
+}
+.cart_left_container a:hover,
+.cart_left_container a:active {
+  background-color: #b91647d2;
+}
+
+@media (min-width: 650px) {
+  .cart_background {
+    min-height: calc(100vh - 87px);
+    padding-top: 95px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .cart_right {
+    width: 450px;
+  }
+  .cart_left {
+    padding-top: 25px;
+    width: 150px;
+  }
+}

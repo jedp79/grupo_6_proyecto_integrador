@@ -1,13 +1,37 @@
-const controlador = {
-    index: (req, res) => {
-        res.render('index');
+//Sequelize
+const db = require('../database/models');
+const { Op } = require('sequelize');
+
+module.exports = {
+    home: (req, res)=> {
+        db.Products.findAll()
+            .then(products => {
+                res.render('home', { products: products });
+            })
+            .catch(error => {
+                console.log(error);
+                res.send(error);
+            });
     },
-    login: (req, res) => {
-        res.render('login');
+    filter: (req, res)=> {
+        db.Products.findAll({ where: { category: req.params.filter } })
+            .then(products => {
+                res.render('home', { products: products, category: req.params.filter });
+            })
+            .catch(error => {
+                console.log(error);
+                res.send(error);
+            });
     },
-    register: (req, res) => {
-        res.render('register');
+    search: (req, res)=> {
+        console.log(req.body)
+        db.Products.findAll({ where: { name: { [Op.like]: `%${req.body.search}%` } } })
+            .then(products => {
+                return res.render('home', { products: products });
+            })
+            .catch(error => {
+                console.log(error);
+                res.send(error);
+            });
     }
 }
-
-module.exports = controlador;

@@ -1,13 +1,13 @@
-//Express
-const express =  require('express');
-const router =  express.Router();
+//Modulos Node JS
+const express = require('express');
+const router = express.Router();
 
-//Controlador
-const mainControlador = require('../controllers/mainController');
+//Rutas
+const mainController = require('../controllers/mainController');
 
-router.get('/', mainControlador.index);
-router.get('/login', mainControlador.login);
-router.get('/register', mainControlador.register);
+router.get('/', mainController.home);
+router.post('/search', mainController.search);
+router.get('/:filter', mainController.filter);
 
-//Exportar
+//Exportas Rutas
 module.exports = router;

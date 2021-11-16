@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/partials.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <!--BANNER-->
+    <%- include('./partials/banner') %>
+        <!--FORM-->
+        <section class="form_section">
+            <form action="/product/upload" class="form" method="POST" enctype="multipart/form-data">
+                <h2>Crear Producto</h2>
+                <label for="name">Nombre</label>
+                <input name="name" type="text">
+
+                <label for="price">Precio</label>
+                <input name="price" type="number">
+                
+                <label for="img">Imagen</label>
+                <input name="img" type="file">
+
+                <label for="category">Categoria</label>
+                <select name="category">
+                    <option value="tortas">Tortas</option>
+                    <option value="galletas">Galletas</option>
+                    <option value="muffins">Muffins</option>
+                </select>
+                
+                <label for="description">Descripción</label>
+                <input name="description" type="text">
+
+                <button type="submit">Crear Producto</button>
+            </form>
+        </section>
+        <!--FOOTER-->
+        <%- include('./partials/footer') %>
+</body>
+</html>

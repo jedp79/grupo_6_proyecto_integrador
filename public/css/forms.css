@@ -1,0 +1,97 @@
+/* ===FONTS=== */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* ===ROOTS=== */
+:root {
+  --colorPrincipal: #b91646;
+  --colorSecundario: #574143;
+  --colorFondo: #eee1ba;
+
+  --fontHeader: 2.5rem;
+  --fontDefault: 2rem;
+  --fontForm: 1.5rem;
+  --fontSecondary: 1rem;
+  --fontMini: 0.875rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===FORMS=== */
+.form_section {
+  background-color: var(--colorFondo);
+  min-height: calc(100vh - 159px);
+  padding-top: 85px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 570px;
+  margin: 0 auto;
+}
+.form h2 {
+  color: var(--colorPrincipal);
+  font-size: var(--fontForm);
+  margin-bottom: 15px;
+}
+.form label {
+  color: var(--colorSecundario);
+}
+.form input {
+  padding: 2px;
+  font-size: var(--fontSecondary);
+  border: 1px solid var(--colorSecundario);
+  margin-bottom: 8px;
+}
+.form select {
+  padding: 2px;
+  font-size: var(--fontSecondary);
+  border: 1px solid var(--colorSecundario);
+  margin-bottom: 8px;
+}
+.form button {
+  font-size: var(--fontSecondary);
+  font-weight: 800;
+  padding: 0.2em;
+  background-color: white;
+  border: 1px solid var(--colorPrincipal);
+  color: var(--colorPrincipal);
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 650px) {
+  .form_section {
+    min-height: calc(100vh - 87px);
+  }
+}
+
+/* ===FORM ERRORS=== */
+.invalid {
+  font-size: var(--fontMini);
+  color: rgb(221, 9, 9);
+  margin-bottom: 5px;
+}
+
+.invalidInput {
+  border: 1px solid rgb(221, 9, 9);
+}
+
+/* ===PRODUCT FORMS=== */
+.form textarea {
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+/* ===REMEMBER ME LOGIN=== */
+.remember {
+  font-size: 0.9rem;
+}
