@@ -1,3 +1,15 @@
+# Retrospectiva Sprint 4
+
+<b>1.	Comenzar a hacer</b>. Después de aprender sobre las distintas tecnologias acerca de los servidores creemos necesario indagar mas sobre este mundo tan extenso. 
+
+<b>2.	Hacer más</b>. Finalizamos el modulo con una buena base teorica sobre los distintos temas abordados pero nos dimos cuenta que nos falta más practica para poder dominarlos mejor y sacarles mas provecho.
+
+<b>3.	Continuar haciendo</b>. Debemos seguir teniendo la excelente comunicación que generamos. Nuestras tareas y objetivos se resuelven de una manera mas eficaz.   
+
+<b>4.	Hacer menos</b>. Este extenso módulo nos generó mas dudas que los anteriores. Necesitamos seguir simplificando las tareas para poder aprovechar mas el tiempo.  
+
+<b>5.	Dejar de hacer</b>. Decidimos dejar de hacer tareas en grupo. Aprendimos que hacerlas individualmente, donde cada integrante la hace cuando quiere/puede, incrementa la eficacia y las ganas.  
+
 # Retrospectiva Sprint 3
 
 <b>1.	Comenzar a hacer</b>. Luego de empezar a crear, estructurar y diseñar nuestra pagina web notamos que hay muchas ideas creativas que pudo aportar cada integrante. Debido a esto, creemos que es necesario empezar a decidir cuales serán las mas convenientes para este proyecto. 
