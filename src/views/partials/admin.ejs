@@ -1,0 +1,19 @@
+<section class="adminTools">
+    <div class="adminTools_logo">
+        ADMIN TOOLS 
+        <i class='bx bx-menu'></i>
+    </div>
+    <ul class="adminTools_lista displayNone">
+        <li><a href="/product/upload">Subir producto</a></li>
+        <li><a href="/product/edit">Editar producto</a></li>
+        <li><a href="/product/dashboard">Administrar Pedidos</a></li>
+    </ul>
+</section>
+<script>
+    const adminBtn = document.querySelector('.adminTools .bx-menu');
+    const adminLista = document.querySelector('.adminTools_lista');
+
+    adminBtn.addEventListener('click', ()=> {
+        adminLista.classList.toggle('displayNone');
+    });
+</script>

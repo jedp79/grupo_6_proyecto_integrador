@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/partials.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <!--BANNER-->
+    <%- include('./partials/banner') %>
+    <!--ADMIN-->
+    <%- include('./partials/admin') %>
+        <!--FORM-->
+        <section class="form_section">
+            <form action="/product/edit/<%= locals.product ? product.id : null %>/form?_method=PUT" class="form" method="POST">
+                <h2 class="tituloProducto">Editar Producto</h2>
+                <label for="name">Nombre</label>
+                <input name="name" type="text" value="<%= locals.product ? product.name : null %>">
+
+                <label for="price">Precio</label>
+                <input name="price" type="number" value="<%= locals.product ? product.price : null %>">
+                
+                <label for="category">Categoria</label>
+                <select name="category">
+                    <option <%= locals.product && product.category == 'tortas' ? 'selected' : null %> value="tortas">Tortas</option>
+                    <option <%= locals.product && product.category == 'galletas' ? 'selected' : null %> value="galletas">Galletas</option>
+                    <option <%= locals.product && product.category == 'muffins' ? 'selected' : null %> value="muffins">Muffins</option>
+                </select>
+                
+                <label for="description">Descripción</label>
+                <input name="description" type="text" value="<%= locals.product ? product.description : null %>">
+
+                <button type="submit">Editar Producto</button>
+            </form>
+            <form action="/product/edit/<%= locals.product ? product.id : null %>/form?_method=DELETE" method="POST" class="delete_form">
+                <button type="submit">Borrar Producto</button>
+            </form>
+        </section>
+        <!--FOOTER-->
+        <%- include('./partials/footer') %>
+</body>
+</html>

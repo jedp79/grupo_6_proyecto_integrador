@@ -1,0 +1,86 @@
+/* ===FONTS=== */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* ===ROOTS=== */
+:root {
+  --colorPrincipal: #b91646;
+  --colorSecundario: #574143;
+  --colorFondo: #eee1ba;
+
+  --fontHeader: 2.5rem;
+  --fontDefault: 2rem;
+  --fontSecondary: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===LISTADO=== */
+.listado {
+  padding-top: 110px;
+  background-color: var(--colorFondo);
+}
+.listado h2 {
+  text-align: center;
+  color: var(--colorSecundario);
+}
+.listado_grid {
+  margin: 0 auto;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+.listado_producto {
+  background-color: white;
+  width: 250px;
+  height: fit-content;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.listado_producto_imagen {
+  width: 240px;
+  height: 150px;
+  margin-bottom: 2px;
+}
+.listado_producto_imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.listado_producto_info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.listado_producto_info div {
+  color: var(--colorSecundario);
+}
+.listado_producto_info span {
+  font-weight: 700;
+  font-size: var(--fontSecondary);
+}
+.listado_producto_info p {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+.listado_producto_mas {
+  text-decoration: none;
+  background-color: var(--colorPrincipal);
+  color: white;
+  padding: 0.25em;
+  width: 100%;
+  text-align: center;
+  font-size: var(--fontSecondary);
+}
+.listado_producto_mas:hover {
+  background-color: #b91647e5;
+}

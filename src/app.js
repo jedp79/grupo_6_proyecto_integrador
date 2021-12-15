@@ -6,7 +6,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
 //Levantar Servidor
-app.listen(3000, ()=> {
+app.listen(process.env.PORT || 3000, ()=> {
     console.log('Servidor corriendo');
 });
 
@@ -35,6 +35,8 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 app.use(userLoggedMiddleware);
 const rememberMiddleware = require('./middlewares/rememberMiddleware');
 app.use(rememberMiddleware);
+const adminToolsMiddleware = require('./middlewares/adminToolsMiddleware');
+app.use(adminToolsMiddleware);
 
 //Rutas
 const mainRoutes = require('./routes/mainRoutes');

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/editList.css">
+    <link rel="stylesheet" href="/css/partials.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos para Editar</title>
+</head>
+<body>
+    <!--BANNER-->
+    <%- include('./partials/banner') %>
+    <!--ADMIN-->
+    <%- include('./partials/admin') %> 
+    
+    <!--LISTADO DE PRODUCTOS-->
+    <section class="listado">
+        <h2>ELEGI PRODUCTO</h2>
+        <div class="listado_grid">
+            <% for( let i=0; i < products.length ; i++ ) { %>
+                <div class="listado_producto">
+                    <div class="listado_producto_imagen">
+                        <img src="/images/products/<%= products[i].img %>" alt="">
+                    </div>
+                    <div class="listado_producto_info">
+                        <div>
+                            <span>$<%= products[i].price %></span>
+                            <p>
+                                <%= products[i].name %>
+                            </p>
+                        </div>
+                    </div>
+                    <a class="listado_producto_mas" href="/product/edit/<%= products[i].id %>/form">EDITAR</a>
+                </div>
+            <% } %> 
+        </div>
+    </section>
+
+    <!--FOOTER-->
+    <%- include('./partials/footer') %>  
+</body>
+</html>

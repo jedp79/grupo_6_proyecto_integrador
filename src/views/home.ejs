@@ -9,6 +9,10 @@
     <title>DOLCE ROME</title>
 </head>
 <body>
+    <!--ADMIN TOOLS-->
+    <% if (locals.admin) { %>
+        <%- include('./partials/admin') %> 
+    <% } %>
     <!--BANNER-->
     <%- include('./partials/banner') %>
     <!--PORTADA-->

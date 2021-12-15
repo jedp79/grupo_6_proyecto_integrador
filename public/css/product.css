@@ -22,34 +22,80 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
+.displayNone {
+  display: none !important;
+}
 
 /*=== POP UP===*/
-.product_popup {
-  position: absolute;
-  width: 100%;
-  bottom: -23px;
+.product_popup_modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  padding-bottom: 30vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.product_popup {
+  margin: auto;
+  background-color: white;
+  padding: 15px;
   text-align: center;
+}
+.product_popup p {
   color: var(--colorPrincipal);
-  font-weight: 700;
+  margin-bottom: 20px;
+}
+.product_popup a {
+  background-color: var(--colorPrincipal);
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--colorPrincipal);
+  padding: 4px;
+  font-size: 1rem;
+}
+.product_popup button {
+  background-color: white;
+  border: 1px solid var(--colorPrincipal);
+  color: var(--colorPrincipal);
+  padding: 4px;
+  font-size: 1rem;
+}
+
+/* ===BANNER=== */
+.banner {
+  display: none !important;
 }
 
 /* ===PRODUCT=== */
 .product_background {
   background-color: var(--colorFondo);
   min-height: calc(100vh - 159px);
-  padding-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.product {
+  width: 100%;
+}
 .product h2 {
-  color: var(--colorPrincipal);
-  margin-bottom: 5px;
+  /* color: var(--colorPrincipal); */
+  /* background-color: white; */
+  /* border-bottom: 1px solid rgba(128, 128, 128, 0.295); */
+  color: var(--colorSecundario);
+  font-size: var(--fontSecondary);
+  font-weight: 600;
+}
+.title_background {
+  display: none;
 }
 .product_detail_img {
-  width: 250px;
-  height: 150px;
+  width: 100%;
+  height: auto;
 }
 .product_detail_img img {
   width: 100%;
@@ -60,38 +106,58 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
-.product_details_pay p {
-  color: var(--colorSecundario);
+.bx-arrow-back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: var(--colorPrincipal);
+  font-size: 1.2rem;
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px black;
+}
+.product_details_pay div i {
+  color: var(--colorPrincipal);
 }
 .product_details_pay span {
   color: var(--colorSecundario);
   font-weight: 700;
-}
-.product_details_pay a {
-  background-color: var(--colorPrincipal);
-  text-decoration: none;
-  color: white;
-  padding: 0.2em;
-  text-align: center;
-  margin: 5px 0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 .product_details_pay button {
   width: 100%;
-  background-color: white;
+  background-color: var(--colorPrincipal);
   border: 1px solid var(--colorPrincipal);
-  color: var(--colorPrincipal);
-  padding: 0.2em;
+  color: white;
+  padding: 20px;
   cursor: pointer;
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
 }
-.product_details_pay a:hover,
-.product_details_pay a:active {
-  background-color: #b91647d2;
+.product_details_pay button i {
+  font-size: 1.3rem;
 }
 
 .product_details_pay button:hover,
 .product_details_pay button:active {
-  background-color: rgb(238, 238, 238);
+  background-color: #b41a48;
+}
+.product_description_title {
+  color: var(--colorSecundario);
+  margin-top: 30px;
+  font-weight: 600;
+}
+.product_description {
+  color: var(--colorSecundario);
+  line-height: 1.4;
 }
 
 .info {
@@ -123,6 +189,7 @@
 }
 
 .related {
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +203,7 @@
   height: 1px;
   width: 220px;
   background-color: var(--colorPrincipal);
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .related_grid {
   padding: 20px 0;
@@ -163,22 +230,67 @@
 }
 .related_product a {
   text-decoration: none;
-  background-color: var(--colorSecundario);
+  background-color: var(--colorPrincipal);
+  width: 100%;
   color: white;
   padding: 0.25em;
-  width: fit-content;
+  text-align: center;
 }
 .related_product a:hover {
   background-color: #574143e1;
 }
 
+/* ===VER MAS POP UP=== */
+.vermas_popup_modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  padding-bottom: 30vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.vermas_popup {
+  width: 400px;
+  margin: auto;
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+}
+.vermas_popup p {
+  color: var(--colorSecundario);
+  margin-bottom: 10px;
+}
+.vermas_popup_btn {
+  background-color: var(--colorPrincipal);
+  border: 1px solid var(--colorPrincipal);
+  color: white;
+  padding: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.vermas_popup_btn:hover {
+  background-color: #b41a48e0;
+  border: 1px solid #b41a48e0;
+}
+
 @media (min-width: 650px) {
+  .banner {
+    display: flex !important;
+  }
   .product_background {
     min-height: calc(100vh - 87px);
     padding-top: 85px;
   }
+  .bx-arrow-back {
+    display: none !important;
+  }
   .product {
-    padding: 15px 0;
+    padding: 15px;
     width: 610px;
   }
   .product_details {
@@ -186,16 +298,75 @@
     gap: 5px;
   }
   .product_detail_img {
-    width: calc(250px * 1.6);
-    height: calc(150px * 1.8);
+    width: 400px;
+    height: 270px;
+    z-index: 10;
+  }
+  .product_detail_img img {
+    z-index: 10;
   }
   .product_details_pay {
-    width: 200px;
     display: flex;
     flex-direction: column;
+    padding: 0;
+    width: 60%;
   }
-  .product_details_pay a {
+  .product_details_pay h2 {
+    order: 1;
+    color: var(--colorPrincipal);
+    font-size: 1.5rem;
+    font-weight: 400;
+    z-index: 10;
+  }
+  .title_background {
+    display: unset;
+    background-color: white;
+    height: calc(1.5rem + 15px);
+    width: calc(100vw - ((100vw - 590px) / 2));
+    position: absolute;
+    top: 95px;
+    right: 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+  }
+  .product_details_pay h2 {
+    order: 1;
+    color: var(--colorPrincipal);
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .product_details_pay div {
+    margin-top: 10px;
+    order: 2;
+  }
+  .product_details_pay span {
+    order: 3;
+  }
+  .product_description {
+    order: 4;
+    width: 100%;
+    height: 100px;
+  }
+  .product_description a {
+    margin-left: 5px;
+    color: var(--colorPrincipal);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .product_details_pay form {
+    order: 5;
     margin-top: auto;
+  }
+  .product_details_pay button {
+    width: 100%;
+    padding: 5px;
+    font-size: 0.8rem;
+    position: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .product_details_pay button i {
+    font-size: 1rem;
   }
   .info {
     width: 610px;
@@ -223,7 +394,74 @@
     margin-bottom: 0;
   }
   .related_grid {
+    width: 100vw;
+    height: 220px;
+    overflow: hidden;
     display: flex;
+    justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
+  }
+  /*=== POP UP===*/
+  .product_popup_modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .product_popup {
+    margin: auto;
+    background-color: white;
+    padding: 15px;
+    top: 35%;
+    text-align: center;
+  }
+  .product_popup p {
+    color: var(--colorPrincipal);
+    margin-bottom: 20px;
+  }
+  .product_popup a {
+    background-color: var(--colorPrincipal);
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--colorPrincipal);
+    padding: 4px;
+    font-size: 1rem;
+  }
+  .product_popup button {
+    background-color: white;
+    border: 1px solid var(--colorPrincipal);
+    color: var(--colorPrincipal);
+    padding: 4px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product {
+    width: 800px;
+  }
+  .product_detail_img {
+    width: 480px;
+    height: 350px;
+  }
+  .product_details_pay {
+    width: 300px;
+  }
+  .product_details_pay h2 {
+    font-size: 1.8rem;
+  }
+  .title_background {
+    height: calc(1.8rem + 18px);
+    width: calc(100vw - ((100vw - 785px) / 2));
+  }
+  .product_details_pay button {
+    width: 80%;
+    padding: 7px;
   }
 }

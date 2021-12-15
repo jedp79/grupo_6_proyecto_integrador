@@ -100,6 +100,58 @@ const controller = {
                 console.log(error);
                 res.send(error);
             })
+    },
+    editList: (req, res)=> {
+        db.Products.findAll()
+            .then(products => {
+                return res.render('editList', { products })
+            })
+            .catch(error => {
+                console.log(error);
+                res.send(error);
+            });
+    },
+    editProduct: (req, res)=> {
+        db.Products.findByPk(req.params.id)
+            .then(product => {
+                return res.render('editProduct', { product })
+            })
+            .catch(error => {
+                console.log(error);
+                res.send(error);
+            });
+    },
+    uploadEdit: (req, res)=> {
+        db.Products.update(
+            {
+                name: req.body.name,
+                price: req.body.price,
+                category: req.body.category,
+                description: req.body.description
+            },{
+                where: { id: req.params.id }
+            }
+        )
+        .then(()=> {
+            return res.redirect('/product/edit');
+        })
+        .catch(error => {
+            console.log(error);
+            res.send(error);
+        })
+    },
+    deleteProduct: (req, res)=> {
+        db.Products.destroy({ where: { id: req.params.id } })
+            .then(()=> {
+                return res.redirect('/product/edit');
+            })
+            .catch(error => {
+                console.log(error);
+                res.send(error);
+            })
+    },
+    dashboard: (req, res)=> {
+        res.render('dashboard');
     }
 }
 

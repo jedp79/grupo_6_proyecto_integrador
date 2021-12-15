@@ -21,7 +21,35 @@
 .alturaUnset {
   max-height: 70px !important;
 }
+.displayNone {
+  height: 0;
+}
 
+/* ===ADMIN TOOLS===*/
+.adminTools {
+  width: 100vw;
+  background-color: rgb(128, 128, 228);
+  position: fixed;
+  top: 58px;
+}
+.adminTools_logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  color: white;
+}
+.adminTools_logo .bx-menu {
+  font-size: 1.5rem;
+}
+.adminTools_lista {
+  padding: 10px;
+  list-style: none;
+}
+.adminTools_lista a {
+  text-decoration: none;
+  color: white;
+}
 /* ===BANNER=== */
 .banner {
   width: 100vw;
@@ -29,6 +57,8 @@
   position: fixed;
   display: flex;
   justify-content: center;
+  z-index: 100;
+  top: 0;
 }
 .banner_inner {
   background-color: var(--colorPrincipal);
@@ -130,6 +160,29 @@
 }
 
 @media (min-width: 600px) {
+  /* ===ADMIN TOOLS===*/
+  .adminTools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .adminTools_logo .bx-menu {
+    display: none;
+  }
+  .adminTools_lista {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .adminTools_lista li {
+    width: 170px;
+    text-align: center;
+  }
+  .adminTools_lista li:not(:last-child) {
+    border-right: 1px solid rgb(101, 101, 197);
+  }
+
+  /* ===BANNER===*/
   .banner_inner {
     flex-direction: row;
     justify-content: space-between;

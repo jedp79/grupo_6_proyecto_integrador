@@ -10,31 +10,57 @@
 </head>
 <body>
     <!--BANNER-->
-    <%- include('./partials/banner') %>
+    <%- include('./partials/banner') %> 
     <!--PRODUCT-->
     <section class="product_background">
         <div class="product">
-            <h2><%= locals.product ? locals.product.name : null %></h2>
+            <!-- <h2><%= locals.product ? locals.product.name : null %></h2> -->
             <div class="product_details">
                 <div class="product_detail_img">
                     <img src="/images/products/<%= locals.product ? locals.product.img : null %>" alt="">
                 </div>
+                <a href="/">
+                    <i class='bx bx-arrow-back'></i>
+                </a>
+                <div class="title_background"></div>
                 <div class="product_details_pay">
-                    <p><%= locals.product ? locals.product.description : null %></p>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <span>$<%= locals.product ? locals.product.price : null %> </span>
-                    <a href="">Comprar</a>
+                    <h2><%= locals.product ? locals.product.name : null %></h2>
+                    <p class="product_description"><%= locals.product ? locals.product.description : null %></p>
                     <form action="/product/<%= locals.product ? locals.product.id : null %>" method="POST">
-                        <button class="product_addToCart" type="submit">Añadir al carrito</button>
+                        <button class="product_addToCart" type="submit">AÑADIR AL CARRITO <i class='bx bxs-cart-alt'></i></button>
                     </form>
-                    <!--POP UP-->
-                    <% if (locals.popup && popup != null) { %>
-                        <div class="product_popup"><%= locals.popup %></div>
-                    <% } %>
                 </div>
             </div>
         </div>
+
+        <!--POP UP-->
+        <% if (locals.popup && popup != null) { %>
+            <section class="product_popup_modal">
+                <div class="product_popup">
+                    <p>PRODUCTO AÑADIDO</p>
+                    <a href="/product/cart">Ir al carrito</a>
+                    <button class="product_popup_btn">Seguir comprando</button>
+                </div>
+            </section>
+        <% } %>
+
+        <!--POP UP VER MAS-->
+        <section class="vermas_popup_modal displayNone">
+            <div class="vermas_popup">
+                <p><%= locals.product ? locals.product.description : null %></p>
+                <button class="vermas_popup_btn">Cerrar</button>
+            </div>
+        </section>
         
-        <div class="info">
+        <!-- <div class="info">
             <div class="info_div">
                 <i class='bx bxl-whatsapp'></i>
                 <div>
@@ -53,7 +79,7 @@
                     <span>11 1234 5678</span>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <div class="related">
             <h3>PORDUCTOS RELACIONADOS</h3>
@@ -64,7 +90,7 @@
                         <div class="related_product_img">
                             <img src="/images/products/<%= related[i].img %>" alt="">
                         </div>
-                        <a href="/product/<%= related[i].id %>">ver mas</a>
+                        <a href="/product/<%= related[i].id %>/show">ver mas</a>
                     </div>
                     <% } %>
                 </div>
@@ -75,11 +101,32 @@
 </body>
 </html>
 <script>
-    const popup = document.querySelector('.product_popup');
-        
-    document.addEventListener('DOMContentLoaded', ()=> {
-        setTimeout(()=> {
-            popup?.classList.add('opacityZero')
-        }, 3000);
+    //Popup
+    const popup = document.querySelector('.product_popup_modal');
+    const popupBtn = document.querySelector('.product_popup_btn');
+
+    popupBtn?.addEventListener('click', ()=> {
+        popup.classList.add('displayNone');
+    });
+
+    //Description overflow
+    const productDescription = document.querySelector('.product_description');
+    let verMas = document.createElement('a')
+    
+    if(productDescription.innerHTML.length > 95) {
+        verMas.innerHTML = 'ver mas'
+        productDescription.innerHTML = productDescription.innerHTML.substring(0, 96) + '...';
+        productDescription.appendChild(verMas);
+    }
+
+    const vermasPopUp = document.querySelector('.vermas_popup_modal');
+    verMas.addEventListener('click', ()=> {
+        vermasPopUp.classList.remove('displayNone');
     })
+
+    const vermasCerrarBtn = document.querySelector('.vermas_popup_btn');
+    vermasCerrarBtn.addEventListener('click', ()=> {
+        vermasPopUp.classList.add('displayNone');
+    })
+
 </script>

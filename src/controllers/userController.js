@@ -58,6 +58,11 @@ const controller = {
                             res.cookie('remember', req.body.email, { maxAge: 60000 });
                         }
 
+                        req.session.admin = false;
+                        if(req.session.userLogged.id === 8){
+                            req.session.admin = true;
+                        }
+
                         return res.redirect('/user/profile');
                     } else {
                         return res.render('login', { errors: { email: { msg: 'Credenciales invalidas' } } })

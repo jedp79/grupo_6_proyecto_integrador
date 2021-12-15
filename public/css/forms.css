@@ -90,8 +90,29 @@
   margin-bottom: 10px;
   padding: 2px;
 }
+.tituloProducto {
+  margin-top: 20px;
+}
 
 /* ===REMEMBER ME LOGIN=== */
 .remember {
   font-size: 0.9rem;
+}
+
+/* ===DELETE BUTTON=== */
+.delete_form {
+  width: 80%;
+  max-width: 570px;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+.delete_form button {
+  background-color: transparent;
+  border: transparent;
+  color: var(--colorPrincipal);
+  cursor: pointer;
+}
+.delete_form button:hover {
+  text-decoration: underline;
 }
