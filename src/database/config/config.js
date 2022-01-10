@@ -1,23 +1,23 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": 'plutopluto22',
-    "database": "dolce_rome",
-    "host": "127.0.0.1",
+    "username": "uhoqysqd72b6w5gs",
+    "password": 'VkT2D6o9hzaxeBV86NHo',
+    "database": "bokcnziqmajjiyybbsss",
+    "host": "bokcnziqmajjiyybbsss-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "uhoqysqd72b6w5gs",
+    "password": "VkT2D6o9hzaxeBV86NHo",
+    "database": "bokcnziqmajjiyybbsss",
+    "host": "bokcnziqmajjiyybbsss-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "uhoqysqd72b6w5gs",
+    "password": "VkT2D6o9hzaxeBV86NHo",
+    "database": "bokcnziqmajjiyybbsss",
+    "host": "bokcnziqmajjiyybbsss-mysql.services.clever-cloud.com",
     "dialect": "mysql"
   }
 }
