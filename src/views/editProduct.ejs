@@ -16,14 +16,24 @@
     <%- include('./partials/admin') %>
         <!--FORM-->
         <section class="form_section">
-            <form action="/product/edit/<%= locals.product ? product.id : null %>/form?_method=PUT" class="form" method="POST">
+            <form action="/product/edit/<%= locals.oldData ? locals.id : product.id %>/form?_method=PUT" class="form" method="POST">
                 <h2 class="tituloProducto">Editar Producto</h2>
                 <label for="name">Nombre</label>
-                <input name="name" type="text" value="<%= locals.product ? product.name : null %>">
+                <input name="name" type="text" value="<%= locals.oldData ? oldData.name : product.name %>" class="<%= locals.errors && errors.name ? 'invalidInput' : null %>">
+                <% if (locals.errors && errors.name) { %>
+                    <div class="invalid">
+                        <%= errors.name.msg %> 
+                    </div>
+                <% } %>
 
                 <label for="price">Precio</label>
-                <input name="price" type="number" value="<%= locals.product ? product.price : null %>">
-                
+                <input name="price" type="number" value="<%= locals.oldData ? oldData.price : product.price %>" class="<%= locals.errors && errors.price ? 'invalidInput' : null %>">
+                    <% if (locals.errors && errors.price) { %>
+                        <div class="invalid">
+                            <%= errors.price.msg %> 
+                        </div>
+                    <% } %>
+
                 <label for="category">Categoria</label>
                 <select name="category">
                     <option <%= locals.product && product.category == 'tortas' ? 'selected' : null %> value="tortas">Tortas</option>
@@ -32,11 +42,16 @@
                 </select>
                 
                 <label for="description">Descripción</label>
-                <input name="description" type="text" value="<%= locals.product ? product.description : null %>">
+                <input name="description" type="text" value="<%= locals.oldData ? oldData.description : product.description %>" class="<%= locals.errors && errors.description ? 'invalidInput' : null %>">
+                <% if (locals.errors && errors.description) { %>
+                 <div class="invalid">
+                     <%= errors.description.msg %> 
+                 </div>
+                <% } %>
 
                 <button type="submit">Editar Producto</button>
             </form>
-            <form action="/product/edit/<%= locals.product ? product.id : null %>/form?_method=DELETE" method="POST" class="delete_form">
+            <form action="/product/edit/<%= locals.oldData ? locals.id : product.id %>/form?_method=DELETE" method="POST" class="delete_form">
                 <button type="submit">Borrar Producto</button>
             </form>
         </section>

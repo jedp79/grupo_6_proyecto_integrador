@@ -4,6 +4,7 @@ const db = require('../database/models');
 //Sequelize
 const { Op } = require('sequelize');
 const { sequelize } = require('../database/models');
+const { validationResult } = require('express-validator');
 
 const controller = {
     productUpload: (req, res)=> {
@@ -122,6 +123,12 @@ const controller = {
             });
     },
     uploadEdit: (req, res)=> {
+        const validations = validationResult(req);
+
+        if(validations.errors.length > 0) {
+            return res.render('editProduct', { errors: validations.mapped(), oldData: req.body, id: req.params.id })
+        } 
+
         db.Products.update(
             {
                 name: req.body.name,

@@ -17,7 +17,7 @@
             <h2>Formulario Registro</h2>
 
             <label for="name">Nombre</label>
-            <input name="name" type="text" class="<%= locals.errors && errors.nombre ? 'invalidInput' : null %>" value="<%= locals.oldData ? oldData.name : '' %>">
+            <input name="name" type="text" class="<%= locals.errors && errors.name ? 'invalidInput' : null %>" value="<%= locals.oldData ? oldData.name : '' %>">
             <% if (locals.errors && errors.name) { %>
                 <div class="invalid">
                     <%= errors.name.msg %>

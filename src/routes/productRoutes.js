@@ -16,6 +16,15 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
+//Express Validator
+const { check } = require('express-validator');
+
+const validations = [
+    check('name').notEmpty().withMessage('Debes completar el nombre'),
+    check('price').notEmpty().withMessage('Debes completar el precio'),
+    check('description').notEmpty().withMessage('Debes completar la descripción')
+]
+
 //Middlewares
 const authMiddleware = require('../middlewares/authMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
@@ -31,7 +40,7 @@ router.post('/:id', authMiddleware, productController.addToCart);
 router.delete('/:id/delete', productController.removeFromCart);
 router.get('/edit', adminMiddleware, productController.editList);
 router.get('/edit/:id/form', adminMiddleware, productController.editProduct);
-router.put('/edit/:id/form', adminMiddleware, productController.uploadEdit);
+router.put('/edit/:id/form', adminMiddleware, validations, productController.uploadEdit);
 router.delete('/edit/:id/form', adminMiddleware, productController.deleteProduct);
 router.get('/dashboard', productController.dashboard);
 
