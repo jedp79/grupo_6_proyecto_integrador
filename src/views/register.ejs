@@ -16,6 +16,10 @@
         <form class="form" action="/user/register" method="POST">
             <h2>Formulario Registro</h2>
 
+            <div>
+                <ul class="tablaErrores"></ul>
+            </div>
+            
             <label for="name">Nombre</label>
             <input name="name" type="text" class="<%= locals.errors && errors.name ? 'invalidInput' : null %>" value="<%= locals.oldData ? oldData.name : '' %>">
             <% if (locals.errors && errors.name) { %>
@@ -53,5 +57,7 @@
     </section>
     <!--FOOTER-->
     <%- include('./partials/footer') %>
+
+    <script src="/js/validations.js"></script>
 </body>
 </html>

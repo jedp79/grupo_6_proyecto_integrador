@@ -15,6 +15,11 @@
     <section class="form_section">
         <form action="/user/login" class="form" method="POST">
             <h2>Formulario Login</h2>
+
+            <div>
+                <ul class="tablaErrores"></ul>
+            </div>
+
             <label for="email">Email</label>
             <input name="email" type="email">
 
@@ -35,5 +40,7 @@
     </section>
     <!--FOOTER-->
     <%- include('./partials/footer') %>
+
+    <script src="/js/validations.js"></script>
 </body>
 </html>

@@ -18,6 +18,11 @@
         <section class="form_section">
             <form action="/product/edit/<%= locals.oldData ? locals.id : product.id %>/form?_method=PUT" class="form" method="POST">
                 <h2 class="tituloProducto">Editar Producto</h2>
+
+                <div>
+                    <ul class="tablaErrores"></ul>
+                </div>
+                
                 <label for="name">Nombre</label>
                 <input name="name" type="text" value="<%= locals.oldData ? oldData.name : product.name %>" class="<%= locals.errors && errors.name ? 'invalidInput' : null %>">
                 <% if (locals.errors && errors.name) { %>
@@ -57,5 +62,7 @@
         </section>
         <!--FOOTER-->
         <%- include('./partials/footer') %>
+
+        <script src="/js/validations.js"></script>
 </body>
 </html>

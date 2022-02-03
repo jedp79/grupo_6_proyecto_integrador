@@ -19,6 +19,11 @@
         <section class="form_section">
             <form action="/product/upload" class="form" method="POST" enctype="multipart/form-data">
                 <h2 class="tituloProducto">Crear Producto</h2>
+
+                <div>
+                    <ul class="tablaErrores"></ul>
+                </div>
+                
                 <label for="name">Nombre</label>
                 <input name="name" type="text">
 
@@ -43,5 +48,7 @@
         </section>
         <!--FOOTER-->
         <%- include('./partials/footer') %>
+
+        <script src="/js/validations.js"></script>
 </body>
 </html>
